@@ -28,6 +28,16 @@ We welcome contributions in many forms, including:
 
 Whether you're fixing a typo or tackling a major issue, all contributions are valuable!  
 
+### 💡 Tips for First-Time Contributors
+
+- Look for issues labeled `good first issue` or `hacktoberfest-2025` or `no-coding-required`
+- Read this guide before submitting a PR  
+- Don’t be afraid to ask questions — [maintainers](https://github.com/orgs/Women-Devs-SG/teams/wds-maintainers) are here to help  
+- Start small: even fixing a typo or adding a link counts!  
+- Celebrate your contributions and share your PRs with the community  
+
+We’re excited to have you here and can’t wait to see your contributions and ideas!
+
 ---
 
 ## Getting Started  

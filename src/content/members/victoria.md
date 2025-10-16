@@ -2,6 +2,7 @@
 name: "Victoria Lo"
 bio: "Director @ Women Devs SG"
 core: true
+ally: false
 socials:
   - name: "Website"
     href: "https://lo-victoria.com"

@@ -12,9 +12,10 @@ export interface Props {
   socials: { name: string; href: string }[];
   badges?: string[];
   core?: boolean; 
+  ally?: boolean; 
 }
 
-const { name, bio, url, socials, badges = [], core = false } = Astro.props;
+const { name, bio, url, socials, badges = [], core = false, ally = false } = Astro.props;
 
 // Define GitHub profile picture URL
 const githubUrl = socials.find(s => s.name === 'GitHub')?.href;
@@ -28,6 +29,19 @@ const isExternal = url ? isExternalLink(url, currDomain) : false;
   <img src={profilePicture} alt={`${name}'s profile picture`} class="profile-picture" />
   <div class="profile-details">
     <h2>{name}</h2>
+    {!core && (
+      <div class="role-badge">
+        {ally ? (
+          <span class="badge ally-badge">
+            Ally
+          </span>
+        ) : (
+          <span class="badge member-badge">
+            Member
+          </span>
+        )}
+      </div>
+    )}
     {core && badges.length > 0 && ( 
       <div class="badges">
         {badges.map(badge => (
@@ -106,6 +120,21 @@ const isExternal = url ? isExternalLink(url, currDomain) : false;
     @apply p-2 hover:rotate-6 transition-transform;
   }
 
+  .role-badge {
+    @apply mb-2;
+  }
+  .ally-badge {
+    @apply bg-green-500 text-white rounded-full px-3 py-1 text-sm font-semibold inline-flex items-center;
+  }
+  .member-badge {
+    @apply bg-pink-500 text-white rounded-full px-3 py-1 text-sm font-semibold inline-flex items-center;
+  }
+  /* Removed icon classes */
+  .i-heroicons-user-male,
+  .i-heroicons-user-female {
+    @apply text-lg;
+  }
+
   /* Dark mode specific styles */
   html[data-theme="dark"] .bio {
     @apply text-white; 
@@ -118,4 +147,5 @@ const isExternal = url ? isExternalLink(url, currDomain) : false;
   html[data-theme="dark"] .website {
     @apply text-blue-300;
   }
+</style>
 </style>

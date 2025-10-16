@@ -2,6 +2,7 @@
 name: "Natasha Ann"
 bio: "Partnerships Lead @ Women Devs SG"
 core: true
+ally: false
 socials:
   - name: "Website"
     href: "https://natashaannn.com/"

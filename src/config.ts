@@ -4,9 +4,9 @@ export const SITE: Site = {
   website: "https://womendevssg.netlify.app/", // replace this with your deployed domain
   author: "Women Devs SG",
   profile: "",
-  desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
+  desc: "Dedicated to inspiring women to excel in technology careers.",
   title: "Women Devs SG",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "wds-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 3,
   postPerPage: 7,
